@@ -69,3 +69,4 @@ async def ban(ctx, user: discord.Member):
 
 
 token = os.environ.get('BOT_TOKEN')
+bot.run(str(token))
