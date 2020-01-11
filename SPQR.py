@@ -34,8 +34,8 @@ async def on_ready():
 @bot.command(pass_context= True)
 async def h(ctx):
     emb = discord.Embed(title= 'Info about command', collor= 0x2472bf)
-    emb.add_field(name= '{}help'.format(prefix), value= 'Shows this embed')
-    emb.add_field(name= '{}status'.format(prefix), value= 'Shows Bot status')
+    emb.add_field(name= '{}help'.format(prefix), value= 'Показывает это меню')
+    emb.add_field(name= '{}status'.format(prefix), value= 'Показывает статус бота')
     emb.add_field(name= '{}mute'.format(prefix), value= 'Ограничивает сообщения: !mute @Seraf')
     await ctx.send(embed= emb)
 
@@ -43,7 +43,7 @@ async def h(ctx):
 @bot.command(pass_context= True)
 async def moder(ctx):
     emb = discord.Embed(title= 'Список для модераторов', collor= 0x324325)
-    emb.add_field(name= '{}helpm'.format(prefix), value= 'Показывает этот список')
+    emb.add_field(name= '{}helpm'.format(prefix), value= 'Показывает это меню')
     emb.add_field(name= '{}mute'.format(prefix), value= 'Огарничивает сообщения: !mute @Seraf')
     await ctx.send(embed= emb)
 
