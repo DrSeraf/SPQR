@@ -8,7 +8,7 @@ bot = commands.Bot(command_prefix= prefix)
 
 ban_msg = ['fuck, да']
 
-bot.remove_command("help")
+bot.remove_command('help')
 
 #Скрипт "Модерация чата"
 @bot.event
@@ -33,7 +33,7 @@ async def on_ready():
 #Команда !h
 @bot.command(pass_context= True)
 async def h(ctx):
-    emb = discord.Embed(title= 'Info about command', collor= 0x2472bf)
+    emb = discord.Embed(title= 'Info about command', collor= 0x39d0d6)
     emb.add_field(name= '{}help'.format(prefix), value= 'Показывает это меню')
     emb.add_field(name= '{}status'.format(prefix), value= 'Показывает статус бота')
     emb.add_field(name= '{}mute'.format(prefix), value= 'Ограничивает сообщения: !mute @Seraf')
@@ -42,7 +42,7 @@ async def h(ctx):
 #Команда !moder
 @bot.command(pass_context= True)
 async def moder(ctx):
-    emb = discord.Embed(title= 'Список для модераторов', collor= 0x324325)
+    emb = discord.Embed(title= 'Список для модераторов', collor= 0x39d0d6)
     emb.add_field(name= '{}helpm'.format(prefix), value= 'Показывает это меню')
     emb.add_field(name= '{}mute'.format(prefix), value= 'Огарничивает сообщения: !mute @Seraf')
     await ctx.send(embed= emb)
@@ -65,7 +65,11 @@ async def mute(ctx, member: discord.Member):
 async def ban(ctx, user: discord.Member):
     await member.ban(user)
 
-
+#Команда !Сигнифер
+@bot.command(pass_context= True)
+async def Сигнифер(ctx, member: discord.Member):
+    mute_role = discord.utils.get(ctx.message.guild.roles, name= "Сигнифер")
+    await member.add_roles(mute_role)
 
 
 token = os.environ.get('BOT_TOKEN')
