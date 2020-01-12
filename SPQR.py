@@ -68,8 +68,8 @@ async def ban(ctx, user: discord.Member):
 #Команда !Сигнифер
 @bot.command(pass_context= True)
 async def Сигнифер(ctx, member: discord.Member):
-    mute_role = discord.utils.get(ctx.message.guild.roles, name= "Сигнифер")
-    await member.add_roles(mute_role)
+    loot_role = discord.utils.get(ctx.message.guild.roles, name= "Сигнифер")
+    await member.add_roles(loot_role)
 
 
 token = os.environ.get('BOT_TOKEN')
