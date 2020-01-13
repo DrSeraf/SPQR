@@ -57,7 +57,7 @@ async def st(ctx):
 @commands.has_permissions(administrator= True)
 async def mute(ctx, member: discord.Member):
     mute_role = discord.utils.get(ctx.message.guild.roles, name= "mute")
-    await member.add_roles(mute_role)
+   await bot.add_roles(mute_role)
 
 #Команда !ban
 @bot.command(pass_context= True)
