@@ -6,7 +6,7 @@ prefix = '!'
 
 bot = commands.Bot(command_prefix= prefix)
 
-ban_msg = ['fuck, да']
+ban_msg = ['']
 
 bot.remove_command('help')
 
@@ -68,8 +68,8 @@ async def ban(ctx, user: discord.Member):
 #Команда !Сигнифер
 @bot.command(pass_context= True)
 async def Сигнифер(ctx, member: discord.Member):
-    Сигнифер_role = discord.utils.get(ctx.message.guild.roles, name= "Сигнифер")
-    await member.add_roles(Сигнифер_role)
+    loot_role = discord.utils.get(ctx.message.guild.roles, name= "Сигнифер")
+    await member.add_roles(loot_role)
 
 
 token = os.environ.get('BOT_TOKEN')
