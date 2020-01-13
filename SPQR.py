@@ -67,7 +67,7 @@ async def ban(ctx, user: discord.Member):
 
 #Команда !Сигнифер
 @bot.command(pass_context= True)
-async def Сигнифер(ctx, member: discord.Member):
+async def loot(ctx, member: discord.Member):
     loot_role = discord.utils.get(ctx.message.guild.roles, name= "Сигнифер")
     await member.add_roles(loot_role)
 
